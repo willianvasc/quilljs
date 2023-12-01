@@ -14,6 +14,7 @@ if (isset($_POST["post"])) {
     <title>Quilljs</title>
     <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css">
     <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -22,10 +23,9 @@ if (isset($_POST["post"])) {
 </head>
 
 <body>
-
     <div class="w-100 bg-dark  d-flex flex-column justify-content-center" style="height: 100vh;">
         <div class="row">
-            <div class="col-8 bg-white mx-auto px-0 d-flex flex-column" style="height:400px">
+            <div class="col-8 bg-white mx-auto px-0 d-flex flex-column overflow-hidden" style="height:400px">
                 <div id="editor"></div>
                 <script src="./index.js"></script>
             </div>
@@ -34,7 +34,7 @@ if (isset($_POST["post"])) {
             <div class="col-8 mx-auto py-2 text-end">
                 <form action="#" method="post" id="form-text">
                     <textarea name="texto" class="d-none" cols="30" rows="10" id="text"></textarea>
-                    <input type="submit" class="btn btn-warning text-white" value="submit">
+                    <input type="submit" class="btn btn-light text-dark" value="Enviar">
                 </form>
             </div>
         </div>
